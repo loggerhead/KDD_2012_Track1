@@ -10,17 +10,26 @@ For saving your time, I strongly recommend you to install `PyPy` which is roughl
 #Dataset
 There are four datasets needed for running:
 
-* `rec_log_train`
-* `rec_log_test`
-* `KDD_Track1_solution`
-* `user_profile`
+* [rec_log_train](https://coding.net/u/loggerhead/p/KDD_2012_Track1/git/raw/master/data/rec_log_train.csv.lrz)
+* [rec_log_test](https://coding.net/u/loggerhead/p/KDD_2012_Track1/git/raw/master/data/rec_log_test.csv.lrz)
+* [KDD_Track1_solution](https://coding.net/u/loggerhead/p/KDD_2012_Track1/git/raw/master/data/KDD_Track1_solution.csv)
+* [user_profile](https://coding.net/u/loggerhead/p/KDD_2012_Track1/git/raw/master/data/user_profile.csv.lrz)
 
 I have made some little changes to the orignal datasets:
 
 * remove header from each file
 * replace separator from `\t` (tab) to `,` (comma)
 
-Thus, for running the program, you need do the same changes.
+If you download datasets from above links, you will found some `.lrz` files and you need use [lrzip](https://github.com/ckolivas/lrzip) to uncompress.
+
+```bash
+# install `lrzip`
+apt-get install lrzip 
+# if you are OSX user, run below command to install `lrzip`
+# brew install lrzip
+
+lrzip -d *.lrz
+```
 
 #Running log
 ```
