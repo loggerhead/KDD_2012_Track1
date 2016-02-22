@@ -44,7 +44,7 @@ class LFM(object):
                 user, item, result = record[:3]
                 # map [-1, 1] to [0, 1]
                 e = ((result + 1) >> 1) - self.predict(user, item)
-                average_e += abs(e)
+                average_e += e * e
                 cnt += 1
 
                 b_u[user] += eta * (e - LAMBDA * b_u[user])
@@ -56,7 +56,7 @@ class LFM(object):
                     p_u[user][k] += eta * (e * q - LAMBDA * p)
 
             average_e /= cnt
-            reprint("%dth trainning used %.1fs\t|e[u][i]| = %.6lf" % (i, t(False), average_e))
+            reprint("%dth trainning used %.1fs\terror = %lf" % (i, t(False), average_e))
             i += 1
 
         print

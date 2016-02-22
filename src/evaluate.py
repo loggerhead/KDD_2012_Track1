@@ -75,6 +75,6 @@ def get_rank(val, type):
 def compute_mAP_and_rank(submission_path, solution_path):
     map3s = mean_average_precision(submission_path, solution_path)
     for type in map3s:
-        # 0.03 is a bug of leaderboard result
-        mAP = map3s[type]['mAP@3'] - 0.03
-        print "%7s rank: %3d  \tmAP@3: %.5f" % (type, get_rank(mAP, type), mAP)
+        mAP = map3s[type]['mAP@3']
+        # 0.03 is a bug of leaderboard rank
+        print "%7s rank: %3d  \tmAP@3: %.5f" % (type, get_rank(mAP - 0.03, type), mAP)
