@@ -1,13 +1,15 @@
 This is a simple solution of [2012 KDD Cup Track 1](http://www.kddcup2012.org/c/kddcup2012-track1), which implemented Latent Factor Model by using Stochastic Gradient Descent algorithm, and most idea is came from `2.2` and `3.1` sections of paper [Context-aware Ensemble of Multifaceted Factorization Models for Recommendation Prediction in Social Networks](https://kaggle2.blob.core.windows.net/competitions/kddcup2012/2748/media/Shanda3.pdf). 
 
-#Run
+# Run
+
 For saving your time, I strongly recommend you to install `PyPy` which is roughly three times faster than `CPython` in my test.
 
 1. Change `config.py` file to tell the program where to find the datasets.
 2. `./run.sh`
 3. Press `Ctrl-C` in terminal whenever you want to end the training loop.
 
-#Dataset
+# Dataset
+
 There are four datasets needed for running:
 
 * [rec_log_train](https://coding.net/u/loggerhead/p/KDD_2012_Track1/git/raw/master/data/rec_log_train.csv.lrz)
@@ -31,7 +33,8 @@ apt-get install lrzip
 lrzip -d *.lrz
 ```
 
-#Running log
+# Running log
+
 ```
 Getting summary of training dataset...
 ======================== Summary of 'rec_log_train.csv' ========================
